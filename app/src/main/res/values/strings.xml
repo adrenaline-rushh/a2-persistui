@@ -1,4 +1,12 @@
 <resources>
   <string name="app_name">Dice Games</string>
-  <string name="you_earn_5_coins">Click the dice to roll\nYou earn 5 coins every time you roll a 6!</string>
+  <string name="rules_string">Click the die to roll\nYou earn 5 coins every time you roll a 6!\n\nIf you roll two sixes in a row, you will get 10 coins!
+  But if you roll any other number in a row, you lose 5 coins!</string>
+  <string name="initial_coins">Coins 10</string>
+  <string name="initial_die_face">0</string>
+  <string name= "initial_prev_roll">Previous Roll 0</string>
+  <string name="initial_sixes_rolled">Sixes Rolled 0</string>
+  <string name="initial_total_rolls">Total Dice Rolls 0</string>
+  <string name="initial_double_sixes">Double Sixes 0</string>
+  <string name="initial_double_others">Double Others 0</string>
 </resources>
