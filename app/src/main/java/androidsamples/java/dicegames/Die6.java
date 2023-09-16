@@ -6,18 +6,21 @@ import java.util.Random;
  * An implementation of a six-faced {@link Die} using {@link Random}.
  */
 public class Die6 implements Die {
+  static final int numFaces = 6;
+  Random rand;
+  private int topFaceValue;
   public Die6() {
-    // TODO implement method
+    rand = new Random();
+    topFaceValue = 0;
   }
 
   @Override
   public void roll() {
-    // TODO implement method
+    topFaceValue = rand.nextInt(numFaces) + 1;
   }
 
   @Override
   public int value() {
-    // TODO implement method
-    return 0;
+    return topFaceValue;
   }
 }

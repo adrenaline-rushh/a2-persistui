@@ -3,12 +3,20 @@ package androidsamples.java.dicegames;
 import androidx.lifecycle.ViewModel;
 
 public class WalletViewModel extends ViewModel {
+  Die6 die;
+  private int currBalance, numSingleSixes, numTotalRolls, numDoubleSixes, numDoubleOthers, previousRollValue, currRollValue;
 
   /**
    * The no argument constructor.
    */
   public WalletViewModel() {
-    // TODO implement method
+    die = new Die6();
+    currBalance = 0;
+    numSingleSixes = 0;
+    numTotalRolls = 0;
+    numDoubleSixes = 0;
+    numDoubleOthers = 0;
+    previousRollValue = 0;
   }
 
   /**
@@ -16,15 +24,31 @@ public class WalletViewModel extends ViewModel {
    *
    */
   public int balance() {
-    // TODO implement method
-    return 0;
+    return currBalance;
   }
 
   /**
    * Rolls the {@link Die} in the wallet and implements the changes accordingly.
    */
   public void rollDie() {
-    // TODO implement method
+    previousRollValue = currRollValue;
+    die.roll();
+    currRollValue = die.value();
+
+    numTotalRolls++;
+
+    if(currRollValue == 6){
+      numSingleSixes++;
+      currBalance += 5;
+      if(previousRollValue == 6) {
+        numDoubleSixes++;
+        currBalance += 5;
+      }
+    }
+    else if(previousRollValue == currRollValue){
+      numDoubleOthers++;
+      currBalance -= 5;
+    }
   }
 
   /**
@@ -32,8 +56,7 @@ public class WalletViewModel extends ViewModel {
    *
    */
   public int dieValue() {
-    // TODO implement method
-    return 0;
+    return currRollValue;
   }
 
   /**
@@ -41,8 +64,7 @@ public class WalletViewModel extends ViewModel {
    *
    */
   public int singleSixes() {
-    // TODO implement method
-    return 0;
+    return numSingleSixes;
   }
 
   /**
@@ -50,8 +72,7 @@ public class WalletViewModel extends ViewModel {
    *
    */
   public int totalRolls() {
-    // TODO implement method
-    return 0;
+    return numTotalRolls;
   }
 
   /**
@@ -59,8 +80,7 @@ public class WalletViewModel extends ViewModel {
    *
    */
   public int doubleSixes() {
-    // TODO implement method
-    return 0;
+    return numDoubleSixes;
   }
 
   /**
@@ -68,8 +88,7 @@ public class WalletViewModel extends ViewModel {
    *
    */
   public int doubleOthers() {
-    // TODO implement method
-    return 0;
+    return numDoubleOthers;
   }
 
   /**
@@ -77,7 +96,6 @@ public class WalletViewModel extends ViewModel {
    *
    */
   public int previousRoll() {
-    // TODO implement method
-    return 0;
+    return previousRollValue;
   }
 }
