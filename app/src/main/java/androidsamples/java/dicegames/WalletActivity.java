@@ -81,6 +81,6 @@ public class WalletActivity extends AppCompatActivity {
       }
     };
 
-    handler.postDelayed(runnable, 2000);
+    handler.postDelayed(runnable, 500);
   }
 }
