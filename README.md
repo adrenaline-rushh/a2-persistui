@@ -15,6 +15,9 @@ Aaditya Raghavan (2020A3PS1251G), Email: f20201251@goa.bits-pilani.ac.in
 
 ### How were the tasks completed?
 
+We took around 5-6 hours to complete the assignment fully and then an additional 1-2 hours in trying different things 
+with the assignment.
+
 1. First, we implemented the interface for Die in the class Die6, and implemented the `roll` and `value` methods.
 2. Next, we moved on to the `WalletViewModel` and calculated the following statistics:
     * `currentBalance` - shows the number of coins earned till now.
@@ -34,6 +37,20 @@ is updated.
 
 ### Running TalkBack
 
+We tried running talkback and noticed that the texts for "Sixes rolled", "Total rolls" and all are extremely small in area
+So, we increased the padding of the texts in order to have a better experience and a little bit bigger touch targets. So as to
+make it easier to figure out approximate locations of all the small text fields.
+
+We read the Android documentation and it read as follows:
+```
+When using an ImageView , ImageButton , CheckBox , or other View that conveys information graphically, 
+use an android:contentDescription attribute to provide a content label for that View
+```
+
+This content label is used by Talkback to read aloud to the person who has turned on Talkback. However, since our die
+value keeps on changing, we need to change the `contentDescription` every time we update the UI. Doing this, the program should work
+perfectly even with talkback on.
+
 ### Running Accessibility Scanner
 
 We created the UI with Accessibility in mind, so when we ran the accessibility scanner after creating the portrait and landscape,
@@ -42,6 +59,24 @@ So, we simply changed the colour to a more darker red and that issue went away.
 
 ### How testing was done?
 
+We were trying for writing the unit tests before writing the code, and following a test-driven approach, but we could not get an idea
+of how to write tests using mockito, so we started to write code for the `WalletViewModel`, and then once we got an idea on how
+we had to write unit tests, then we started testing.
+
+We found Mockito a little bit difficult to understand, but once we understood how mockito works and what mocking exactly is, after understanding
+that, we did not have too many issues with implementing it in unit tests. However, we still could not do it for integration tests because we could not 
+understand how to Inject the mock into a class object present in `Wallet Activity`.
+
 ### Pair Programming
 
+Pair programming rating - 4/5
+We did Pair Programming to quite a good extent this time, due to time constraints we also divided the work, Yash was constantly reviewing
+and also simultaneously helping with writing code and testing as well, Aaditya was writing most of the code logic and also wrote the unit tests 
+and tried writing integration tests which we could not complete however.
+
 ### Assignment Difficulty
+
+Assignment difficulty: 6/10
+We did not find the implementation of ViewModel or Toast to be too difficult, however, we did face quite
+a lot of issues with Mockito which were difficult to resolve and understand. Other than that, the assignment
+went quite smoothly.

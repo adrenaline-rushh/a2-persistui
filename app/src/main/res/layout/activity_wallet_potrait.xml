@@ -32,7 +32,7 @@
       android:layout_height="wrap_content"
       android:text="@string/rules_string"
       android:textAlignment="center"
-      android:textSize="15sp"
+      android:textSize="18sp"
       android:paddingLeft="20dp"
       android:paddingRight="20dp"
 
@@ -61,6 +61,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text="@string/initial_coins"
+        android:textSize="18sp"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btn_die"
@@ -89,6 +90,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/initial_prev_roll"
+        android:textSize="18sp"
+        android:padding="3dp"
 
         android:layout_marginTop="20dp"
 
@@ -116,6 +119,8 @@
           android:layout_height="wrap_content"
 
           android:text="@string/initial_sixes_rolled"
+          android:textSize="18sp"
+          android:padding="3dp"
           android:layout_marginEnd="10dp"/>
 
       <TextView
@@ -124,6 +129,8 @@
           android:layout_height="wrap_content"
 
           android:text="@string/initial_total_rolls"
+          android:textSize="18sp"
+          android:padding="3dp"
 
           android:layout_marginStart="10dp"/>
     </LinearLayout>
@@ -147,6 +154,8 @@
           android:layout_height="wrap_content"
 
           android:text="@string/initial_double_sixes"
+          android:textSize="18sp"
+          android:padding="3dp"
           android:layout_marginEnd="10dp"
           android:textColor="@color/green"/>
 
@@ -156,6 +165,8 @@
           android:layout_height="wrap_content"
 
           android:text="@string/initial_double_others"
+          android:textSize="18sp"
+          android:padding="3dp"
           android:textColor="@color/red"
 
           android:layout_marginStart="10dp"/>
