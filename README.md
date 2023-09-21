@@ -41,7 +41,7 @@ We tried running talkback and noticed that the texts for "Sixes rolled", "Total 
 So, we increased the padding of the texts in order to have a better experience and a little bit bigger touch targets. So as to
 make it easier to figure out approximate locations of all the small text fields.
 
-We read the Android documentation and it read as follows:
+To figure out how to make ImageButtons more accessible, we read the Android documentation and it read as follows:
 ```
 When using an ImageView , ImageButton , CheckBox , or other View that conveys information graphically, 
 use an android:contentDescription attribute to provide a content label for that View

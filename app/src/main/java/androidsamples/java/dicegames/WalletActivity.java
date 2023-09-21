@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 public class WalletActivity extends AppCompatActivity {
-  private WalletViewModel walletViewModel;
+  public WalletViewModel walletViewModel;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
