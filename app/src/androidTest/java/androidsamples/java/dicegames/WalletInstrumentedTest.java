@@ -29,6 +29,7 @@ public class WalletInstrumentedTest {
 
   @Mock
   private Die6 die;
+  //private WalletViewModel walletViewModel;
 
   @InjectMocks
 
